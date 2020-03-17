@@ -5,4 +5,4 @@
 
 ----
 
-Basic introduction to learning terraform and infrastructure as code. Will be used to create a basic configuration to enable learning.
+Basic introduction to learning terraform and infrastructure as code. Will be used to create a basic configuration to enable learning. Built following along to a tutorial and modified when needed.
