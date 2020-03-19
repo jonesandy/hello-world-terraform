@@ -36,12 +36,12 @@ data "aws_ami" "aws-linux" {
   }
 
   filter {
-    name   = ["root-device-type"]
+    name   = "root-device-type"
     values = ["ebs"]
   }
 
   filter {
-    name   = ["virtualization-type"]
+    name   = "virtualization-type"
     values = ["hvm"]
   }
 }
