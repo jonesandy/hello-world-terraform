@@ -5,4 +5,11 @@
 
 ----
 
-Basic introduction to learning terraform and infrastructure as code. Will be used to create a basic configuration to enable learning. Built following along to a tutorial and modified when needed.
+Basic introduction to learning terraform and infrastructure as code. Built following along to a tutorial and modified when needed.
+
+## Usage
+
+To run locally ```git clone```.
+
+You will need to create a ```terraform.tfvars``` file in the root directory to hold your secret keys for AWS.
+
