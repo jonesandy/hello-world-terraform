@@ -99,7 +99,7 @@ resource "aws_route_table" "rtb" {
   }
 }
 
-resource "aws_route_table_association" "rta-subtnet1" {
+resource "aws_route_table_association" "rta-subnet1" {
   subnet_id      = aws_subnet.subnet1.id
   route_table_id = aws_route_table.rtb.id
 }
@@ -115,9 +115,9 @@ resource "aws_security_group" "elb-sg" {
   vpc_id = aws_vpc.vpc.id
 
   ingress {
-    from_port  = 80
-    to_port    = 80
-    protocol   = "tcp"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
