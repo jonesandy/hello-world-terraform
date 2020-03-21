@@ -82,6 +82,13 @@ resource "aws_subnet" "subnet1" {
   availability_zone       = data.aws_availability_zones.available.names[0]
 }
 
+resource "aws_subnet" "subnet2" {
+  cidr_block = var.subnet2_address_space
+  vpc_id = aws_vpc.vpc.id
+  map_public_ip_on_launch = "true"
+  availability_zone = data.aws_availability_zones.available.names[1]
+}
+
 # ROUTING   
 resource "aws_route_table" "rtb" {
   vpc_id = aws_vpc.vpc.id
