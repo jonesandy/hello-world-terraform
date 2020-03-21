@@ -94,7 +94,7 @@ resource "aws_route_table_association" "rta-subtnet1" {
 }
 
 # SECURITY GROUPS
-resource "aws_security_group" "nginx-sg" {
+resource "aws_security_group" "nginx_sg" {
   name        = "nginx_sg"
   description = "Allow ports for nginx demo"
   vpc_id      = aws_vpc.vpc.id
@@ -121,12 +121,12 @@ resource "aws_security_group" "nginx-sg" {
 }
 
 # INSTANCES   
-resource "aws_instance" "nginx" {
+resource "aws_instance" "nginx1" {
   ami                    = data.aws_ami.aws-linux.id
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.subnet1.id
   key_name               = var.key_name
-  vpc_security_group_ids = [aws_security_group.nginx-sd.id]
+  vpc_security_group_ids = [aws_security_group.nginx_sg.id]
 
   connection {
     type        = "ssh"
